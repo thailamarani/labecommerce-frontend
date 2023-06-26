@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nome": "Boné Nasa",
+        "valor": 100,
+        "imagem": "../produtos/bone-nasa.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Foguete de Brinquedo",
+        "valor": 120,
+        "imagem": "../produtos/brinquedo-foguete.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Camiseta Feminina Nasa",
+        "valor": 130,
+        "imagem": "../produtos/camiseta-fem-nasa.jpg"
+    },
+    {
+        "id": 4,
+        "nome": "Camiseta Masculina Nasa",
+        "valor": 130,
+        "imagem": "../produtos/camiseta-masc-nasa.jpg"
+    },
+    {
+        "id": 5,
+        "nome": "Caneca Nasa",
+        "valor": 80,
+        "imagem": "../produtos/caneca-nasa.jpg"
+    },
+    {
+        "id": 6,
+        "nome": "Travesseiro Nasa",
+        "valor": 150,
+        "imagem": "../produtos/travesseiro-nasa.jpg"
+    }
+]
