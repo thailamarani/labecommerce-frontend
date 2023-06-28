@@ -60,3 +60,5 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
     - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
     
  ### 
+
+ PROJETO POR THAILA MARANI

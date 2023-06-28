@@ -2,16 +2,21 @@ import Filtro from './componentes/filtro/Filtro';
 import Home from './componentes/home/Home';
 import Carrinho from './componentes/carrinho/Carrinho';
 import { useEffect, useState } from 'react';
-import { ProdutosContainer } from './componentes/home/style';
 import styled from 'styled-components';
+
+export const AppContainer = styled.div `
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+    background-color: rgb(0, 0, 72);
+    color: white;
+`;
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(0, 0, 64);
-  color: white;
 `
 
 function App() {
@@ -35,24 +40,26 @@ function App() {
   }, [])
 
   return (
-    <Container className="App">
+    <AppContainer>
       <Filtro
         ordem={ordem} setOrdem={setOrdem}
         setValorMax={setValorMax}
         setValorMin={setValorMin}
         setBuscaNome={setBuscaNome}
       />
-      <Home
-        carrinho={carrinho} setCarrinho={setCarrinho}
-        ordem={ordem}
-        valorMin={valorMin}
-        valorMax={valorMax}
-        buscaNome={buscaNome}
-      />
-      <Carrinho
-        carrinho={carrinho} setCarrinho={setCarrinho}
-      />
-    </Container>
+      <Container>
+        <Home
+          carrinho={carrinho} setCarrinho={setCarrinho}
+          ordem={ordem}
+          valorMin={valorMin}
+          valorMax={valorMax}
+          buscaNome={buscaNome}
+        />
+        <Carrinho
+          carrinho={carrinho} setCarrinho={setCarrinho}
+        />
+      </Container>
+    </AppContainer>
   );
 }
 

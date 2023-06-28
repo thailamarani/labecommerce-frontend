@@ -1,4 +1,4 @@
-import { CarrinhoContainer } from "./style";
+import { CarrinhoContainer } from './style';
 
 const Carrinho = ({ carrinho, setCarrinho }) => {
 
@@ -31,7 +31,7 @@ const Carrinho = ({ carrinho, setCarrinho }) => {
                     )
                 })
             }
-            <p>Total: {total} </p>
+            <p>Total: R$ {total} </p>
         </CarrinhoContainer>
     )
 };

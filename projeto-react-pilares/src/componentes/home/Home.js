@@ -1,5 +1,5 @@
 import produtos from '../../produtos.json';
-import { Imagem, ProdutosContainer } from './style';
+import { Imagem, ProdContainer, ProdutosContainer } from './style';
 
 const Home = ({ carrinho, setCarrinho, ordem, valorMin, valorMax, buscaNome }) => {
     const addProduto = (produto) => {
@@ -24,7 +24,7 @@ const Home = ({ carrinho, setCarrinho, ordem, valorMin, valorMax, buscaNome }) =
 
     return (
         <ProdutosContainer>
-            <p>Produtos</p>
+            <p>PRODUTOS</p>
             {produtos
                 .sort((prod1, prod2) => {
                     return ordem === "crescente"
@@ -52,12 +52,12 @@ const Home = ({ carrinho, setCarrinho, ordem, valorMin, valorMax, buscaNome }) =
                 })
                 .map((produto) => {
                     return (
-                        <ProdutosContainer key={produto.id}>
+                        <ProdContainer key={produto.id}>
                             <Imagem src={produto.imagem} alt={produto.nome} />
                             <p>Nome: {produto.nome}</p>
                             <p>Preço: {produto.valor}</p>
                             <button onClick={() => addProduto(produto)}>Comprar</button>
-                        </ProdutosContainer>
+                        </ProdContainer>
                     )
                 })}
         </ProdutosContainer>

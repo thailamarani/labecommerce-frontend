@@ -1,13 +1,38 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const InputContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    height: 100px;
-    justify-content: space-evenly;
-    padding: 10px 10px;
-    background-color: rgb(77, 77, 138);
-    color: black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: row;
+    p {
+        margin: 15px;
+    }
+    input {
+        margin: 15px;
+        text-align: center;
+    }
+`;
+
+export const FiltroContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(59, 59, 161);
+    text-align: center;
+    select {
+        width: 115px;
+        height: 25px;
+        justify-content: center; 
+        margin: 15px;
+    }
+    p {
+        font-size: 16px;
+        margin-left: 30px; 
+    }
+`;
+
+export const Button = styled.button`
+    margin-right:30px;
+    width: 50px;
+    height: 25px;
+    margin: 15px; 
 `;
