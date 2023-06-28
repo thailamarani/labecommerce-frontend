@@ -1,9 +1,16 @@
-import { InputContainer } from "./style";
+import { Button, InputContainer, FiltroContainer } from './style';
 
 const Filtro = ({ ordem, setOrdem, setValorMin, setValorMax, setBuscaNome }) => {
+    const filterCleaner = () => {
+        setBuscaNome("")
+        setValorMax(Infinity)
+        setValorMin(-Infinity)
+        setOrdem("asc")
+    }
+
     return (
-        <div>
-            <p>Filtro</p>
+        <FiltroContainer>
+            <p>Ordenar por:</p>
             <select value={ordem} onChange={(e) => setOrdem(e.target.value)}>
                 <option value="crescente">Crescente</option>
                 <option value="decrescente">Decrescente</option>
@@ -22,7 +29,8 @@ const Filtro = ({ ordem, setOrdem, setValorMin, setValorMax, setBuscaNome }) => 
                     type="text"
                     onChange={(e) => setBuscaNome(e.target.value)} />
             </InputContainer>
-        </div>
+            <Button onClick={filterCleaner}>Voltar</Button>
+        </FiltroContainer>
     )
 };
 
